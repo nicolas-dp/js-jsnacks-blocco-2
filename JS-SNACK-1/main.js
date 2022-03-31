@@ -12,20 +12,31 @@ somma_while = 0;
 
 for (let i = 1; i <= 5; i++) {
     numero_utente = parseInt(prompt(`Inerisci il ${i} numero`));
-    somma = somma + numero_utente;
-    
+
+    if (isNaN(numero_utente)) {
+        alert("Non hai inserito valori numerici")
+    } else {
+        somma = somma + numero_utente;
+    }
 }
 
 console.log(`La somma di tutti i numeri inseriti è: ${somma}`);
 
 
 // Con il ciclo while 
-let  j= 1;
+let j = 1;
 
 while (j <= 5) {
     numero_utente = parseInt(prompt(`Inerisci il ${j} numero`));
-    somma_while = somma_while + numero_utente;
-    j++;
+    if (isNaN(numero_utente)) {
+        alert("Non hai inserito valori numerici")
+    } else {
+        somma_while = somma_while + numero_utente;
+        j++;
+    }
+
+
+
 }
 
 console.log(`La somma di tutti i numeri inseriti è: ${somma_while}`);
